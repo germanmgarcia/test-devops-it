@@ -2,7 +2,10 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
+
+variables:
+  acrLoginServer: $(acr_login_server)
 
 steps:
 - task: UsePythonVersion@0
@@ -17,12 +20,12 @@ steps:
     pytest app/test_app.py
   displayName: 'Run tests'
 
-- task: Docker@2
-  inputs:
-    command: buildAndPush
-    repository: $(acrLoginServer)/order-service
-    dockerfile: '**/Dockerfile'
-    containerRegistry: $(dockerRegistryServiceConnection)
-    tags: |
-      $(Build.BuildId)
-  displayName: 'Build and Push Docker image'
+  - task: Docker@2
+    inputs:
+      command: buildAndPush
+      repository: $(acrLoginServer)/order-service
+      dockerfile: "**/Dockerfile"
+      containerRegistry: $(dockerRegistryServiceConnection)
+      tags: |
+        $(Build.BuildId)
+    displayName: "Build and Push Docker image"
