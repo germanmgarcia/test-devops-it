@@ -16,7 +16,7 @@ steps:
   - task: Docker@2
     inputs:
       command: buildAndPush
-      repository: $(acrLoginServer)/order-service
+      repository: order-service
       dockerfile: "Dockerfile"
       containerRegistry: $(dockerRegistryServiceConnection)
       tags: |
