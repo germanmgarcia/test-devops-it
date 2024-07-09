@@ -37,5 +37,6 @@ pool:
 También es necesario que configure el servicio de conexión al ACR.
 En Pipeline solo tiene dos pasos, uno ejecuta solamente las pruebas unitarios y el siguiente construye la imagen necesaria para implementarla en AKS.
 Las variables que necesita configurar en el pipeline son:
-acrLoginServer = Es el logín server del ACR, ejemplo: 8pkpz2wbacrdevopsg1.azurecr.io
-dockerRegistryServiceConnection = Es el nombre de la conexión que se configura en Azure DevOps para poder ingresar al ACR, que apunta directamente al repositorio.
+|  1 |  2 |
+|--------------|--------------|
+| acrLoginServer | Es el logín server del ACR, ejemplo: 8pkpz2wbacrdevopsg1.azurecr.io |
