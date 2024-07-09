@@ -39,4 +39,24 @@ En Pipeline solo tiene dos pasos, uno ejecuta solamente las pruebas unitarios y 
 Las variables que necesita configurar en el pipeline son:
 |  1 |  2 |
 |--------------|--------------|
-| acrLoginServer | Es el logín server del ACR, ejemplo: 8pkpz2wbacrdevopsg1.azurecr.io |
+| dockerRegistryServiceConnection | Es el nombre que tiene la conexión que se configura en Azure DevOps para el ACR |
+
+## Implementar la aplicación
+
+En este paso, se debe configurar las variables que tiene el script, se ejecuta con bash ./deply.sh  , con esto se obtendran los valores necesarios para
+que se cree el rol correspondiente para que AKS pueda obtener la imagen, tambien se debe tener en cuenta el nombre del ACR y el tag que quiere implementar.
+Puede validar que datos necesita el archivo y modificarlo, a continuación modifique el nombre del acr en el archivo de order-service-deployment junto con el tag y en el archivo sh para despues ejecutarlo y esperar a que se implemente.
+Para obtener el nombre del grupo de recursos
+```sh
+AKS_RESOURCE_GROUP
+az aks list --query "[].{ResourceGroup:resourceGroup}" --output table
+```
+Para obtener el nombre del ACR
+```sh
+ACR_NAME
+az acr list --resource-group rg-tight-alien --query "[].{acrName:name}" --output table
+```
+Y con este podra probar que el servicio esta disponible, tome la dirección IP y coloquela en el navegador, si es que decide implementar el loadbalancer
+```sh
+kubectl get services -n tech-prod
+```
