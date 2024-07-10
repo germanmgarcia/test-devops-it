@@ -81,3 +81,5 @@ LinkerD expande nuestra API de Kubernetes al proporcionarnos métricas detallada
 Junto a este conjunto de herramientas, podemos integrar Loki, que se encarga del almacenamiento y consultas de logs. Esto nos permite recolectar logs y realizar consultas basadas en ellos, facilitando la búsqueda de errores. Loki se integra con Grafana y Kubernetes, y podemos obtener métricas utilizando su propio lenguaje de consulta, LogQL.
 
 En resumen, esta arquitectura nos permite tener un monitoreo completo. Prometheus recolecta métricas, Loki gestiona los logs y Grafana proporciona visualización y análisis tanto de métricas como de logs en un solo lugar. LinkerD asegura la resiliencia y seguridad al comunicarse activamente con los microservicios. De esta manera, podemos mejorar significativamente nuestra observabilidad utilizando estas herramientas.
+
+![Imagen02](imagenes/arquitectura.png)
