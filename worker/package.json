@@ -1,0 +1,17 @@
+{
+  "name": "my-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for resizing images",
+  "main": "index.js",
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "^3.63.2"
+  },
+  "dependencies": {
+  }
+}
