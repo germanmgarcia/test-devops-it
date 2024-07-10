@@ -43,7 +43,7 @@ Las variables que necesita configurar en el pipeline son:
 
 ## Implementar la aplicación
 
-En este paso, se debe configurar las variables que tiene el script, se ejecuta con bash ./deply.sh  , con esto se obtendran los valores necesarios para
+En este paso, se debe configurar las variables que tiene el script, se ejecuta con bash ./deploy.sh  , con esto se obtendran los valores necesarios para
 que se cree el rol correspondiente para que AKS pueda obtener la imagen, tambien se debe tener en cuenta el nombre del ACR y el tag que quiere implementar.
 Puede validar que datos necesita el archivo y modificarlo, a continuación modifique el nombre del acr en el archivo de order-service-deployment junto con el tag y en el archivo sh para despues ejecutarlo y esperar a que se implemente.
 Para obtener el nombre del grupo de recursos
@@ -60,3 +60,15 @@ Y con este podra probar que el servicio esta disponible, tome la dirección IP y
 ```sh
 kubectl get services -n tech-prod
 ```
+
+## Implementar el Worker
+El worker en cloudflare, esta fincionando, el la carpeta worker, se encuentra el código del mismo, y más adelante estara la url
+disponible para que puedan ver que funciona correctamente.
+```sh
+https://gm-dv.org/cdn-cgi/image/width=500,height=500,quality=80/https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg
+```
+![Imagen01](imagenes/imagen01.png)
+
+----------------------------------
+
+![Imagen02](imagenes/imagen02.png)
