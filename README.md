@@ -86,6 +86,9 @@ En resumen, esta arquitectura nos permite tener un monitoreo completo. Prometheu
 
 ## Recursos
 [implementación de clústeres de Azure Kubernetes Service (AKS)](https://learn.microsoft.com/es-es/azure/aks/learn/quick-kubernetes-deploy-terraform?pivots=development-environment-azure-cli)
+
 [Extracción de imágenes de una instancia de Azure Container Registry](https://learn.microsoft.com/es-es/azure/container-registry/container-registry-auth-kubernetes)
+
 [Transform via Workers](https://developers.cloudflare.com/images/transform-images/transform-via-workers/#lack-of-preview-in-the-dashboard)
+
 [Routes](https://developers.cloudflare.com/workers/configuration/routing/routes/)
