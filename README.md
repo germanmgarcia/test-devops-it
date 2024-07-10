@@ -83,3 +83,9 @@ Junto a este conjunto de herramientas, podemos integrar Loki, que se encarga del
 En resumen, esta arquitectura nos permite tener un monitoreo completo. Prometheus recolecta métricas, Loki gestiona los logs y Grafana proporciona visualización y análisis tanto de métricas como de logs en un solo lugar. LinkerD asegura la resiliencia y seguridad al comunicarse activamente con los microservicios. De esta manera, podemos mejorar significativamente nuestra observabilidad utilizando estas herramientas.
 
 ![Imagen02](imagenes/arquitectura.png)
+
+## Recursos
+[implementación de clústeres de Azure Kubernetes Service (AKS)](https://learn.microsoft.com/es-es/azure/aks/learn/quick-kubernetes-deploy-terraform?pivots=development-environment-azure-cli)
+[Extracción de imágenes de una instancia de Azure Container Registry](https://learn.microsoft.com/es-es/azure/container-registry/container-registry-auth-kubernetes)
+[Transform via Workers](https://developers.cloudflare.com/images/transform-images/transform-via-workers/#lack-of-preview-in-the-dashboard)
+[Routes](https://developers.cloudflare.com/workers/configuration/routing/routes/)
