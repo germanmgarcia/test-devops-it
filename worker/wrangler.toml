@@ -1,5 +1,5 @@
 name = "my-worker"
-account_id = "dbe21553e3803ebd336a247576ebd2fb"
+account_id = "dbe21553e3803ebd336a"
 workers_dev = true
 compatibility_date = "2023-07-09"
 main = "index.js"
